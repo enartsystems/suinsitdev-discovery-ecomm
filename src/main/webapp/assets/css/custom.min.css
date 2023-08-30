@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/*# sourceMappingURL=custom.min.css.map */
+/*
+Template Name: Suinsit Discovery PRM 
+Color Base: #FF9F0F
+Author: Ismael Gonzalez
+Version: 1.0
+Website: 
+Contact: ismael.dominguez@enartsystems.com
+*/
+:root{
+	
+	/* COLORES */
+	--color-app: #FF9F0F;
+	
+	/* Regla Monocromatica */
+	--color-mono1: #805008;
+	--color-mono2: #FFBE5C;
+	--color-mono3: #805F2E;
+	--color-mono4: #CC7F0C;
+	--color-mono4-rgba: 204,127,12;
+	
+	/* Regla Compuestos */
+	--color-comp1: #CCAA21;
+	--color-comp1-rgba: 204, 170, 33;
+	--color-comp2: #998946;
+	--color-comp3: #4FE2FF;
+	--color-comp4: #21CCBA;
+	
+	
+	/* 
+	MENU LATERAL
+	Regla: Monocromatica + Blanco 
+	*/	
+	--vz-vertical-menu-bg-dark: var(--color-app);	/* Fondo del  menu */	
+	--vz-vertical-menu-title-color-dark: var(--color-mono2);
+	--vz-vertical-menu-item-color-dark: var(--color-mono1);	/* Color de la fuente del menu */
+	--vz-vertical-menu-item-hover-color-dark: white;	/* Color de la fuente hover item*/
+	--vz-vertical-menu-item-active-color-dark: var(--color-mono2);	/* Color de la fuente del item activo */
+	--vz-vertical-menu-sub-item-color-dark: var(--color-mono1);	/* Color de la fuente del sub-menu */
+	--vz-vertical-menu-sub-item-hover-color-dark: white;	/* Color de la fuente hover del sub-item */
+	--vz-vertical-menu-sub-item-active-color-dark: var(--color-mono2);	/* Color de la fuente del sub-item activo */
+	
+	/*HEADER*/
+	--vz-header-bg-dark: var(--color-mono2);
+	--vz-header-item-color-dark: var(--color-mono4);
+	--vz-topbar-user-bg-dark: var(--color-mono2);
+	
+}
+
+.navbar-header .user-name-text{
+	color: var(--color-mono1);
+	
+}
+.badge-soft-secondary {
+    color:  var(--color-mono4);
+    background-color: rgba(var(--color-mono4-rgba), 0.2);	/* Mismo color con transparencia */
+}
+    .hamburger-icon span {
+       
+           background-color: var(--color-mono4) !important;
+    }
+    
+.auth-bg-cover {
+    background: linear-gradient(-45deg,var(--color-app) 20%,white);
+}
+.auth-one-bg .bg-overlay {
+    background: linear-gradient(to right,var(--color-mono2),var(--color-mono2));
+ }
+ .btn-success {
+    color: white;
+    background-color: var(--color-comp1);
+    border-color: var(--color-comp1);
+}
+ .btn-success:hover {
+    color: white;
+    background-color: rgba(var(--color-comp1-rgba), 0.8);
+    border-color: rgba(var(--color-comp1-rgba), 0.8);
+}
+ .btn-success:active {
+    color: white;
+    background-color: var(--color-comp2);
+    border-color: var(--color-comp2);
+}
+ .btn-success:focus {
+    color: white;
+    background-color:var(--color-comp2);
+    border-color: var(--color-comp2);
+}
+.text-primary{
+		color: var(--color-mono1) !important;
+	
+}
+.btn-info {
+    color: #fff;
+    background-color: var(--color-comp1);
+    border-color: var(--color-comp1);
+}
+.btn-info:hover {
+    color: white;
+    background-color: var(--color-comp2);
+    border-color: var(--color-comp2);
+}
+.btn-info:focus {
+    color: white;
+    background-color: var(--color-comp2);
+    border-color: var(--color-comp2);
+}
+.btn-info:active {
+    color: white;
+    background-color: var(--color-comp2);
+    border-color: var(--color-comp2);
+}

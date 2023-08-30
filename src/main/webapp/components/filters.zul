@@ -1,0 +1,17 @@
+<zk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul/zul.xsd"
+	xmlns:h="xhtml"
+	xmlns:d="http://www.zkoss.org/2005/zk/client/attribute">
+ 
+ <listbox id="candidateLb" style="overflow:scroll;" height="90%"  >
+      <listhead>
+          	<listheader label="Campos" sort="auto" />
+      </listhead>
+     	<template name="model" >
+         	  <listitem label="${each.atribute}" value="${each}"/>
+       	</template>
+ </listbox>
+
+ 
+
+</zk>

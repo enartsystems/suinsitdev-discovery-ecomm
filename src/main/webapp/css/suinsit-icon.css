@@ -1,0 +1,171 @@
+.s-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.s-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+.s-icon:before {
+  content: "\00a0";
+}
+.s-icon.s-icon-squared {
+  width: 1em;
+}
+.s-icon-video1 {
+  background-image: url(../img/icons/svg/video.svg);
+}
+.s-icon-producto {
+  background-image: url(../img/icons/svg/producto.svg);
+}
+.s-icon-policia {
+  background-image: url(../img/icons/svg/policia.svg);
+}
+.s-icon-menus {
+  background-image: url(../img/icons/svg/lista.svg);
+}
+.s-icon-computadora {
+  background-image: url(../img/icons/svg/computadora.svg);
+}
+.s-icon-profesora {
+  background-image: url(../img/icons/svg/profesora.svg);
+}
+.s-icon-bbdd {
+  background-image: url(../img/icons/svg/bbdd.svg);
+}
+.s-icon-diseno {
+  background-image: url(../img/icons/svg/diseno-grafico.svg);
+}
+.s-icon-apoyo {
+  background-image: url(../img/icons/svg/apoyo.svg);
+}
+.s-icon-report1 {
+  background-image: url(../img/icons/svg/report1.svg);
+}
+.s-icon-chart {
+  background-image: url(../img/icons/svg/grafico.svg);
+}
+.s-icon-home1 {
+  background-image: url(../img/icons/svg/home1.svg);
+}
+.s-icon-menu-item {
+  background-image: url(../img/icons/svg/menu-item.svg);
+}
+.s-icon-cog-auto {
+  background-image: url(../img/icons/svg/cog.svg);
+}
+.s-icon-pluggin {
+  background-image: url(../img/icons/svg/web-plugin.svg);
+}
+.s-icon-pluggin-read {
+  background-image: url(../img/icons/svg/file-and-folder.svg);
+}
+.s-icon-installation {
+  background-image: url(../img/icons/svg/installation.svg);
+}
+.s-icon-deleteApp {
+  background-image: url(../img/icons/svg/error.svg);
+}
+.s-icon-editApp {
+  background-image: url(../img/icons/svg/code.svg);
+}
+.s-icon-events {
+  background-image: url(../img/icons/svg/comunication-events.png);
+}
+.s-icon-streams {
+  background-image: url(../img/icons/svg/server-streams.png);
+}
+.s-icon-api {
+  background-image: url(../img/icons/svg/api_integration.png);
+}
+.s-icon-flujo {
+  background-image: url(../img/icons/svg/diagrama-de-flujo.svg);
+}
+.s-icon-devops {
+  background-image: url(../img/icons/svg/eternity.svg);
+}
+.s-icon-coding {
+  background-image: url(../img/icons/svg/coding.svg);
+}
+.s-icon-apps {
+  background-image: url(../img/icons/svg/website.svg);
+}
+.s-icon-funnel {
+  background-image: url(../img/icons/svg/funnel.svg);
+}
+.s-icon-lapiz {
+  background-image: url(../img/icons/svg/lapiz.svg);
+}
+.s-icon-lapizplus {
+  background-image: url(../img/icons/svg/lapizplus.svg);
+}
+.s-icon-trash {
+  background-image: url(../img/icons/svg/delete.svg);
+}
+.s-icon-pdf {
+  background-image: url(../img/icons/svg/pdf.svg);
+}
+.s-icon-xls {
+  background-image: url(../img/icons/svg/xls1.svg);
+}
+.s-icon-cards {
+  background-image: url(../img/icons/svg/cards.svg);
+}
+.s-icon-listing {
+  background-image: url(../img/icons/svg/listing.svg);
+}
+.s-icon-save {
+  background-image: url(../img/icons/svg/save.svg);
+}
+.s-icon-clear {
+  background-image: url(../img/icons/svg/rubber.svg);
+}
+.image-cropper-container {
+  /*rtl:ignore*/
+  direction: ltr;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC"); 
+}
+.image-cropper-container1 {
+  /*rtl:ignore*/
+  direction: ltr;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("/img/icons/placeholder.png"); 
+}
+.z-portalchildren-title{
+color:#171717;
+}
+.z-portalchildren-counter{
+background:#D97800;
+color:#ffff;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(1rgb(238, 238, 236)8, 133)  rgb(128, 128, 128);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(128, 128, 128);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(192, 192, 192);
+  border-radius: 20px;
+  border: 3px solid rgb(192, 192, 192);
+}

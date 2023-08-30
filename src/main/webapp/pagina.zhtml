@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:zk="zk" xmlns:z="zul" xmlns:c="client"
+	xmlns:b='http://www.google.com/2005/gml/b'
+	xmlns:data='http://www.google.com/2005/gml/data'
+	xmlns:expr='http://www.google.com/2005/gml/expr'
+	xmlns:og='http://opengraphprotocol.org/schema/'>
+	<head>
+
+    <meta charset="utf-8" />
+    <title>Login | Plataforma Suinsit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="Suinsit pltaform" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+	<body>
+	PRUEBA
+	</body>
+	
+	
+	</html>

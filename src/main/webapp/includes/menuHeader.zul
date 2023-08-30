@@ -1,0 +1,20 @@
+<zk xmlns:h="xhtml" xmlns:d="http://www.zkoss.org/2005/zk/client/attribute">
+	<h:ul class="navbar-nav" id="navbar-nav">
+	  <forEach items="@load(ds.menus)" varStatus="st">
+	    <h:li class="nav-item">
+           <h:a class="nav-link menu-link" href="#sidebar${st.index}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar${st.index}">
+                <h:i class="ri-dashboard-2-line"></h:i> <h:span data-key="t-${st.index}">${each.name}</h:span>
+           </h:a>
+                 <h:div class="collapse menu-dropdown" id="sidebar${st.index}">
+                     <h:ul class="nav nav-sm flex-column">
+                      <forEach items="${each.items}" var="item" varStatus="su">
+                         <h:li class="nav-item">
+                             <a class="nav-link" onClick="@command('selectItem',item=item,main=each.name)" d:data-key="k-${su.index}">${item.name}</a>
+                         </h:li>
+                      </forEach>
+                     </h:ul>
+                </h:div>
+          </h:li>
+	  </forEach>
+	</h:ul>
+</zk>

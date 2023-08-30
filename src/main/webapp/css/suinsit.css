@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.border-field{
+	border:0.5px solid #CCCCCC;
+}
+.margin-field{
+	margin-bottom: 5px; 
+	margin-top: 2px;
+}
+.field-default{
+	
+}
+.z-combobox-input{
+	font-size:14px;
+	height:30px;
+}
+.z-combobox-button{
+	height:30px;
+}
+.z-datebox-input{
+	font-size:14px;
+	height:30px;
+}
+.z-datebox-button{
+	height:30px;
+}
+.form-control:disabled,.form-control[readonly]{
+background:#FFF !important;
+color: rgb(28,28,26) !important;
+border:0px;
+}
+.z-datebox-disabled > input{
+background:#FFF !important;
+color: rgb(28,28,26) !important;
+}.z-tabs{
+background:#FFF !important;
+	
+}
+.z-tab{
+background:#FFF !important;
+	
+}
+.z-tab-text{
+	font-size:14px;
+}

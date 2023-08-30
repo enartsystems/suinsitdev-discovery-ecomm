@@ -1,0 +1,115 @@
+<zk xmlns:h="xhtml" xmlns:d="http://www.zkoss.org/2005/zk/client/attribute">
+	<h:ul class="navbar-nav" id="navbar-nav">
+	  <h:li class="menu-title"><h:span data-key="t-menu">Menu</h:span></h:li>
+	
+	  <forEach items="@load(ds.menus)" varStatus="st">
+	    <h:li class="nav-item">
+	    <!-- Primer nivel Item -->
+           <h:a class="nav-link menu-link" 
+           href="#sidebar${st.index}" 
+           data-bs-toggle="collapse" 
+           role="button" 
+           aria-expanded="false" 
+           aria-controls="sidebar${st.index}">
+                
+                <h:i class="${each.iconClass}"></h:i> <h:span data-key="t-${st.index}">${each.name}</h:span>
+           
+           </h:a>
+           
+           <!-- Segundo nivel Submenu -->
+                 <h:div class="collapse menu-dropdown" id="sidebar${st.index}">
+                     <h:ul class="nav nav-sm flex-column">
+                     <!-- Elementos del segundo nivel -->
+                      <forEach items="${each.items}" var="item" varStatus="su">
+                         <h:li class="nav-item">                         
+                               <h:a href="#submenu${st.index}-${su.index}"
+                                class="nav-link"
+                               	data-bs-toggle="collapse" 
+                               	role="button"
+                               	aria-expanded="false"
+                               	aria-controls="submenu${st.index}-${su.index}"
+                               	data-key="t-${st.index}">
+                               	<h:i class="${item.iconClass}"></h:i>
+                               	
+                               	${item.name}
+                               </h:a>
+                               
+                               <!-- Tercer nivel Submenu -->
+                               <h:div class="collapse menu-dropdown" id="submenu${st.index}-${su.index}">
+                                     <h:ul class="nav nav-sm flex-column">
+                                       <forEach items="${item.items}" var="item1" varStatus="sa">                                       
+                                           <h:li class="nav-item">
+                                           		<h:a onClick="@command('selectItem',item=item1,main=item.name)"
+                                           		href="#"
+                                           		class="nav-link" 
+                                           		d:data-key="k-${sa.index}">
+                                           		${item1.name}
+                                           		</h:a>
+                                           </h:li>                                               
+                                      </forEach>
+                                    </h:ul>
+                              </h:div>
+                         </h:li>
+                      </forEach>
+
+                     </h:ul>
+                </h:div>
+          </h:li>
+          
+ </forEach>
+ 
+  <!-- SIN ESTOS DOS LI EL MENU DEL SIDE NO HACE BIEN EL SCROLL -->
+	  <h:li class="nav-item">
+	  	<h:a href="#" class="nav-link" data-key="t-chapuza"></h:a>
+	  </h:li>
+	  <h:li class="nav-item">
+	  	<h:a href="#" class="nav-link" data-key="t-chapuza"></h:a>
+	  </h:li>
+	  
+
+
+	  
+	  <!-- 	  	  <forEach items="@load(ds.menus)" varStatus="st"> -->
+<!-- 	    <h:li class="nav-item"> -->
+<!-- 	    Primer nivel Item -->
+<!--            <h:a class="nav-link menu-link" href="#sidebar${st.index}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar${st.index}"> -->
+<!--                 <h:i class="${each.iconClass}"></h:i> <h:span data-key="t-${st.index}">${each.name}</h:span> -->
+<!--            </h:a> -->
+           
+<!--            Segundo nivel Submenu -->
+<!--                  <h:div class="collapse menu-dropdown" id="sidebar${st.index}"> -->
+<!--                      <h:ul class="nav nav-sm flex-column"> -->
+<!--                       <forEach items="${each.items}" var="item" varStatus="su"> -->
+<!--                          <h:li class="nav-item"> -->
+                         
+<!--                                <h:a class="nav-link menu-link" -->
+<!--                                	href="#submenu${st.index}-${su.index}" -->
+<!--                                	data-bs-toggle="collapse" role="button" -->
+<!--                                	aria-expanded="false" -->
+<!--                                	aria-controls="submenu${st.index}-${su.index}"> -->
+<!--                                	<h:i class="${item.iconClass}"></h:i> -->
+<!--                                	<h:span data-key="s-${st.index}-${su.index}"> -->
+<!--                                		${item.name} -->
+<!--                                	</h:span> -->
+<!--                                </h:a> -->
+                               
+<!--                                Tercer nivel Submenu -->
+<!--                                <h:div class="collapse menu-dropdown" id="submenu${st.index}-${su.index}"> -->
+<!--                                      <h:ul class="nav nav-sm flex-column"> -->
+<!--                                        <forEach items="${item.items}" var="item1" varStatus="sa"> -->
+<!--                                            <h:li class="nav-item"> -->
+<!--                                            onClick="@command('selectItem',item=item1,main=item.name)" -->
+<!--                                                     <a sclass="nav-link" href="#" onClick="@command('selectItem',item=item1,main=item.name)" d:data-key="k-${sa.index}">${item1.name}</a> -->
+<!--                                            </h:li>                                                -->
+<!--                                       </forEach> -->
+<!--                                     </h:ul> -->
+<!--                               </h:div> -->
+<!--                          </h:li> -->
+<!--                       </forEach> -->
+<!--                      </h:ul> -->
+<!--                 </h:div> -->
+<!--           </h:li> -->
+<!-- 	  </forEach> -->
+	</h:ul>
+</zk>
+

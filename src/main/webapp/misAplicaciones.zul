@@ -1,0 +1,47 @@
+<zk xmlns:h="native">
+	<nodom
+		viewModel="@id('vm') @init('com.suinsit.webapp.nocode.AplicationUI')"
+		validationMessages="@id('vmsgs')">
+			<div class="row">
+			<div class="col-sm-3 col-xl-3">
+			</div>
+				<div class="col-sm-6 col-xl-6">
+					<div class="row">
+						<forEach items="@load(vm.applications)"
+							var="item">
+							<div class="col-sm-4 col-xl-4 ">
+								<div class="card border card-border-dark">
+									<div class="card-header  ">
+									<a	sclass="list-icons-item text-decoration-none"  tooltiptext="Lanch Application"
+										onClick="@command('editApplication',app=item)" >
+										<h:h6 class="card-title text-primary fw-bolder ">
+											${item.projectBase.txname}
+										</h:h6>
+										</a>
+									<div
+										class="card-body border-top-0">
+									
+											<div class="d-flex position-relative">
+											  <image
+														class="flex-shrink-0 me-1 avatar-sm rounded"
+														src="@load('img/programming/041-computing-cloud.png' )">
+													</image>
+												<div >
+												<h:p
+													>
+													${item.projectBase.dsdescription}
+												</h:p>
+											</div>
+											</div>
+											
+									     </div>
+									
+								</div>
+							</div>
+							</div>
+						</forEach>
+					</div>
+				</div>
+			</div>
+	</nodom>
+</zk>

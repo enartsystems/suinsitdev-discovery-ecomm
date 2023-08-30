@@ -1,0 +1,3 @@
+docker build -t 2w1x0a76.gra7.container-registry.ovh.net/enartsystems/discovery-application-pmo:2.0.0 .
+docker push 2w1x0a76.gra7.container-registry.ovh.net/enartsystems/discovery-application-pmo:2.0.0
+#docker run  -p 8081:9092 --env-file ./env.txt -v /home/manuel/git/suinsit-nocode-apps/default:/opt/suinsit/default  -v /home/manuel/git/suinsit-nocode-apps/default/studio:/opt/suinsit/default/studio   -v /home/manuel/git/suinsit-nocode-apps/default/apps:/opt/suinsit/default/apps -v /home/manuel/git/suinsit-nocode-apps/default/architecture:/opt/suinsit/default/architecture  suinsit/applications:1.0.4 

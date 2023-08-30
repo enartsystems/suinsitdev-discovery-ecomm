@@ -1,0 +1,40 @@
+<zk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul/zul.xsd"
+	xmlns:h="xhtml"
+	xmlns:d="http://www.zkoss.org/2005/zk/client/attribute">
+	<window 
+       		id="createProjectModal" 
+       		title="" 
+       		border="normal" 
+       		visible="true" 
+       		width="590px" 
+       		height="342px" 
+       		onClose="self.visible = false; event.stopPropagation();">
+     		<!-- Create Project Modal -->
+       		<html>
+       		<![CDATA[ 		<div id="errorPopup" class="modal fade modal-alert modal-danger" tabindex="-1" style="display: none; position: absolute;">]]>
+       		</html>
+   				<div class="modal-dialog" style="position: relative; margin:0px; top: -25px; left: -6px;">
+   			    <div class="modal-content">
+                  <div class="modal-header"><h:i class="fa fa-times-circle"></h:i></div>
+                  <div class="modal-title">Error ${requestScope['javax.servlet.error.status_code']}"</div>
+                  <div class="modal-body">
+                    <vbox spacing="3px">
+                      ${requestScope['javax.servlet.error.exception_type']}
+                      ----------------------------
+                      ${requestScope['javax.servlet.error.message']}
+                      ----------------------------
+                      ${requestScope['javax.servlet.error.exception']}
+                    </vbox>
+                  ryereyeryeyeyeryeeeryeryeyeyeryeyey
+                  </div>
+                  <div class="modal-footer">
+                    <button label="Continue" class="btn btn-danger" onClick="spaceOwner.detach()"></button>
+                  </div>
+                </div>
+              </div>
+            <html>
+       		<![CDATA[</div> ]]>
+       		</html>
+       		</window>
+	</zk>

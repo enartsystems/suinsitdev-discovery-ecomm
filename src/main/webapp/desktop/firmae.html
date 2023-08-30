@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+ <script src="../js/autoscript.js"></script>
+ <script type="text/javascript">
+	AutoScript.cargarAppAfirma();
+	function firmaCorrectaCallback(signatureB64, certificateB64, extraData) {
+		parent.firmado(signatureB64);
+		}
+		function errorCallback(errorType, errorMessage) {
+			showLog("Type: " + errorType + "\nMessage: " + errorMessage);
+		}
+
+		function firmarDocumento(documento){
+			var documentoSinFirmar = documento;	
+			AutoScript.sign(
+				documentoSinFirmar,
+				"SHA512withRSA",
+				"AUTO",
+				null,
+				firmaCorrectaCallback,
+				errorCallback
+			);
+		}	
+	</script>	

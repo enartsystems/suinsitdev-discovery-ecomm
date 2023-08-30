@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:zk="zk" xmlns:z="zul" xmlns:c="client"
+	xmlns:b='http://www.google.com/2005/gml/b'
+	xmlns:data='http://www.google.com/2005/gml/data'
+	xmlns:expr='http://www.google.com/2005/gml/expr'
+	xmlns:og='http://opengraphprotocol.org/schema/'>
+	<head>
+
+    <meta charset="utf-8" />
+    <title>Discovery | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="Suinsit pltaform" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <!-- auth-page wrapper -->
+    <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
+       
+        <div class="bg-overlay"></div>
+        <!-- auth-page content -->
+        <div class="auth-page-content overflow-hidden pt-lg-5">
+         <div id="notificacion"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-lg-6">
+                                    <div class="p-lg-5 p-4 auth-one-bg h-100">
+                                        <div class="bg-overlay" style="opacity: .5 !important;"></div>
+                                        <div class="position-relative h-100 d-flex flex-column">
+                                            <div class="mb-4">
+                                                <a href="index.zhtml" class="d-block">
+                                                    <img src="img/logo3.png" alt="" width="30%" height="30%"/>
+                                                </a>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <div class="mb-3">
+                                                    <i class="ri-double-quotes-l display-4 text-success"></i>
+                                                </div>
+
+                                                <div
+                                                	id="qoutescarouselIndicators"
+                                                	class="carousel slide"
+                                                	data-bs-ride="carousel">
+                                                	<div
+                                                		class="carousel-indicators">
+                                                		<button
+                                                			type="button"
+                                                			data-bs-target="#qoutescarouselIndicators"
+                                                			data-bs-slide-to="0"
+                                                			class="active"
+                                                			aria-current="true"
+                                                			aria-label="Slide 1">
+                                                		</button>
+                                                		<button
+                                                			type="button"
+                                                			data-bs-target="#qoutescarouselIndicators"
+                                                			data-bs-slide-to="1"
+                                                			aria-label="Slide 2">
+                                                		</button>
+                                                		<button
+                                                			type="button"
+                                                			data-bs-target="#qoutescarouselIndicators"
+                                                			data-bs-slide-to="2"
+                                                			aria-label="Slide 3">
+                                                		</button>
+                                                		<button
+                                                			type="button"
+                                                			data-bs-target="#qoutescarouselIndicators"
+                                                			data-bs-slide-to="3"
+                                                			aria-label="Slide 4">
+                                                		</button>
+
+                                                		<button
+                                                			type="button"
+                                                			data-bs-target="#qoutescarouselIndicators"
+                                                			data-bs-slide-to="4"
+                                                			aria-label="Slide 5">
+                                                		</button>
+
+                                                	</div>
+                                                	<div
+                                                		class="carousel-inner text-center text-white pb-5">
+                                                		<div
+                                                			class="carousel-item active">
+                                                			<p
+                                                				class="fs-24 ">
+                                                				Suinsit
+                                                				PMO
+                                                			</p>
+                                                		</div>
+                                                		<div
+                                                			class="carousel-item">
+                                                			<p
+                                                				class="fs-24 fst-italic">
+                                                				"Define
+                                                				tus
+                                                				estándares"
+                                                			</p>
+                                                		</div>
+                                                		<div
+                                                			class="carousel-item">
+                                                			<p
+                                                				class="fs-24 fst-italic">
+                                                				"Establece
+                                                				tus
+                                                				métodos
+                                                				de
+                                                				gestión"
+                                                			</p>
+                                                		</div>
+                                                		<div
+                                                			class="carousel-item">
+                                                			<p
+                                                				class="fs-24 fst-italic">
+                                                				"Supervisa
+                                                				tus
+                                                				proyectos"
+                                                			</p>
+                                                		</div>
+                                                		<div
+                                                			class="carousel-item">
+                                                			<p
+                                                				class="fs-24 fst-italic">
+                                                				"Gestiona
+                                                				tus
+                                                				recursos"
+                                                			</p>
+                                                		</div>
+                                                	</div>
+                                                </div>
+                                                <!-- end carousel -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+
+                                <z:div class="col-lg-6" viewModel="@id('vm') @init('com.suinsit.webapp.login.LoginUI')" validationMessages="@id('vmsgs')">
+                                    <z:div id="login"
+											class="p-lg-5 p-4" visible="true">
+                                        <div>
+                                            <h5 class="text-primary">Bienvenido a   <z:label value="@load(vm.ctxBean.customerLabel)"></z:label></h5>
+                                            <p class="text-muted">Autentificate para acceder a Discovery </p>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <form
+													action="desktop/apps.zhtml">
+													<z:div
+														form="@id('fx')  @load(vm.loginTO) @save(vm.loginTO,before={'login'})">
+														<div
+															class="mb-3">
+															<label
+																for="username" class="form-label">
+																Nombre
+																de
+																usuario / email
+															</label>
+															<z:textbox
+																placeholder="Nombre de usuario o email"
+																value="@bind(fx.ssousuario.txusername) @validator(vm.validator,required=true ,maxl='100' )"
+																class="form-control" />
+															<z:label
+																sclass="text-danger" value="@load(vmsgs['user'])" />
+														</div>
+
+														<div
+															class="mb-3">
+															<div
+																class="float-end">
+																<z:a
+																	onClick="@command('resetLogin')" class="text-muted">
+																	Olvido
+																	su
+																	contraseña?
+																</z:a>
+															</div>
+															<label
+																class="form-label" for="password-input">
+																Contraseña
+															</label>
+															<div
+																class="position-relative auth-pass-inputgroup mb-3">
+																<z:textbox
+																	type="password"
+																	value="@bind(fx.ssousuario.erpassword) @validator(vm.validator,required=true )"
+																	class="form-control pe-5" />
+																<z:label
+																	sclass="text-danger" value="@load(vmsgs['pass'])" />
+															</div>
+														</div>
+
+														
+
+														<div
+															class="mt-4">
+															<z:button
+																class="btn btn-success w-100" label="Autentificar"
+																onClick="@command('login')">
+															</z:button>
+
+														</div>
+													</z:div>
+
+												</form>
+                                        </div>
+
+                                        
+                                    </z:div>
+                                    										<z:div id="forget"
+											class="p-lg-5 p-4" visible="false">
+											<div>
+												<h5
+													class="text-primary">
+													<z:label
+														value="@load(vm.ctxBean.customerLabel)">
+													</z:label>
+												</h5>
+												<p class="text-muted">
+													Introduzca su usuario o email
+													y siga las
+													instrucciones
+													recibidas!
+												</p>
+											</div>
+											<lord-icon
+												src="https://cdn.lordicon.com/rhvddzym.json" trigger="loop"
+												colors="primary:#0ab39c" class="avatar-xl">
+											</lord-icon>
+											<div class="mt-4">
+												<form
+													action="desktop/apps.zhtml">
+													<z:div
+														form="@id('fx')  @load(vm.loginTO) @save(vm.loginTO,before={'sendOTP'})">
+														<div
+															class="mb-3">
+															<label
+																for="username" class="form-label">
+																Nombre
+																de
+																usuario o Email
+															</label>
+															<z:textbox id="email1"
+																placeholder="correo electronico o nombre de usuario"
+																value="@bind(fx.ssousuario.txusername) @validator(vm.validator,required=true ,maxl='100' )"
+																class="form-control" />
+															<z:label
+																sclass="text-danger" value="@load(vmsgs['email1'])" />
+														</div>
+														<div
+															class="mt-4">
+															<z:button
+																class="btn btn-success w-100" label="Enviar"
+																onClick="@command('sendOTP')">
+															</z:button>
+
+														</div>
+													</z:div>
+
+												</form>
+											</div>
+										</z:div>
+										<z:div id="codeBox"
+											class="p-lg-5 p-4" visible="false">
+											<div>
+												<h5
+													class="text-primary">
+													<z:label
+														value="@load(vm.ctxBean.customerLabel)">
+													</z:label>
+												</h5>
+												<p class="text-muted">
+													Introduzca el código recibido!
+												</p>
+											</div>
+
+											<div class="mt-4">
+												<form
+													action="desktop/apps.zhtml">
+													<z:div
+														form="@id('fx')  @load(vm.loginTO) @save(vm.loginTO,before={'validarOTP'})">
+														<div
+															class="mb-3">
+															<label
+																for="username" class="form-label">
+																Introduzca
+																Código
+															</label>
+															<z:intbox
+																id="numCode" placeholder="Codigo de verificación"
+																class="form-control" />
+															<z:label
+																sclass="text-danger" value="@load(vmsgs['numCode'])" />
+														</div>
+														<div
+															class="mt-2">
+															<z:button
+																class="btn btn-success w-100" label="Validar"
+																onClick="@command('validarOTP')">
+															</z:button>
+
+														</div>
+														<div
+															class="mt-2">
+															<z:button
+																class="btn btn-dark w-100" label="Reenviar Codigo"
+																onClick="@command('reenviarOTP')">
+															</z:button>
+
+														</div>
+													</z:div>
+
+												</form>
+											</div>
+										</z:div>
+										<z:div id="change"
+											class="p-lg-5 p-4" visible="false">
+											<div>
+												<h5
+													class="text-primary">
+													<z:label
+														value="@load(vm.ctxBean.customerLabel)">
+													</z:label>
+												</h5>
+												<p class="text-muted">
+													Introduzca su nueva
+													contraseña!
+												</p>
+											</div>
+
+											<div class="mt-4">
+												<form
+													action="desktop/apps.zhtml">
+													<z:div
+														form="@id('fx')  @load(vm.loginTO) @save(vm.loginTO,before={'changePass'})">
+														<div
+															class="mb-3">
+															<z:label id="labelPass"
+																class="form-label" >
+																Contraseña
+															</z:label>
+															<div
+																class="position-relative auth-pass-inputgroup mb-3">
+																<z:textbox id="pass2"
+																	type="password"
+																	value="@bind(fx.ssousuario.erpassword) @validator(vm.validator,type='PASSWORD',required=true )"
+																	class="form-control pe-5" />
+																<z:label
+																	sclass="text-danger" value="@load(vmsgs['pass2'])" />
+															</div>
+														</div>
+														<div
+															class="mb-3">
+
+															<label
+																class="form-label" for="password-input">
+																Repita
+																Contraseña
+															</label>
+															<div
+																class="position-relative auth-pass-inputgroup mb-3">
+																<z:textbox
+																	type="password" id="pass3"
+																	value="@bind(fx.repeat) @validator(vm.validator,type='PASSWORD',field=labelPass,required=true,equals= fx.ssousuario.erpassword)"
+																	class="form-control pe-5" />
+																<z:label
+																	sclass="text-danger" value="@load(vmsgs['pass3'])" />
+															</div>
+														</div>
+														<div
+															class="mt-4">
+															<z:button
+																class="btn btn-success w-100" label="Cambiar"
+																onClick="@command('changePass')">
+															</z:button>
+
+														</div>
+													</z:div>
+
+												</form>
+											</div>
+										</z:div>
+                                    
+                                </z:div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- end col -->
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end auth page content -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <p class="mb-0">
+                                <script>document.write(new Date().getFullYear())</script> Suinsit Platform <i class="mdi mdi-heart text-danger"></i> by Enart Systems
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+    </div>
+    <!-- end auth-page-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- password-addon init -->
+    <script src="assets/js/pages/password-addon.init.js"></script>
+</body>
+
+</html>

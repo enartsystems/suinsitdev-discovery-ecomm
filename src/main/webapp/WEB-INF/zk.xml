@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<preference>
+		<name>org.zkoss.zk.ui.WebApp.name</name>
+		<value>Suinsit</value>
+	</preference>
+
+	<preference>
+		<name>ThreadLocal</name>
+		<value>
+			org.springframework.web.context.request.RequestContextHolder=requestAttributesHolder,inheritableRequestAttributesHolder;
+			org.springframework.security.context.ThreadLocalSecurityContextHolderStrategy=contextHolder
+		</value>
+	</preference>
+	<library-property>
+		<name>org.zkoss.theme.preferred</name>
+		<value>marigold</value> <!--blueberryandraspberry_c deepsea_c or silvertail, atlantic, deepsea, gardensalad 
+			etc. spaceblack gardensalad macaron-->
+	</library-property>
+	<library-property>
+		<name>org.zkoss.util.label.web.charset</name>
+		<value>UTF-8</value>
+	</library-property>
+<language-config>
+		<addon-uri>/WEB-INF/ckez-bind-addon.xml</addon-uri>
+	</language-config>
+	<device-config>
+     <device-type>ajax</device-type>
+     <server-push-class>org.zkoss.zkmax.ui.comet.CometServerPush</server-push-class>
+    
+ </device-config>
+	<session-config>
+       <session-timeout>3600</session-timeout>
+		<timeout-uri>/login.zhtml</timeout-uri>
+		<timer-keep-alive>false</timer-keep-alive>
+		<max-desktops-per-session>30</max-desktops-per-session>
+		<max-requests-per-session>30</max-requests-per-session>
+		<max-pushes-per-session>30</max-pushes-per-session>
+	</session-config>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>WEB-INF/sys/error.zul</location>
+	</error-page>
+	<client-config>
+		<debug-js>false</debug-js>
+	</client-config>
+
+	<listener>
+		<description>ThreadLocal Synchronization Listener</description>
+		<listener-class>org.zkoss.zkplus.util.ThreadLocalListener
+		</listener-class>
+	</listener>
+
+	<system-config>
+		<label-location>/WEB-INF/zk-label.properties</label-location>
+		<ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory
+		</ui-factory-class>
+		 <upload-charset>ISO-8859-1</upload-charset>
+	</system-config>
+
+	<library-property>
+		<name>org.zkoss.web.preferred.locale</name>
+		<value>es</value>
+	</library-property>
+</zk>

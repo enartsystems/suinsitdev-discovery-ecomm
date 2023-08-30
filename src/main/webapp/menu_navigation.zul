@@ -1,0 +1,30 @@
+<zk xmlns:h="native">
+	<nodom 	viewModel="@id('vm') @init('com.suinsit.webapp.nocode.MenuNavigation')" validationMessages="@id('vmsgs')">
+	<h:nav class="sidebar-nav">
+      <h:ul id="sidebarnav">
+         <h:li class="nav-small-cap"></h:li>
+         <h:li>
+				<a sclass="has-arrow waves-effect text-decoration-none fw-bolder" onClick="@command('goToHome', page='applications.zhtml')" >
+					<h:i class="ti-layout-grid2"></h:i>
+					<h:span class="hide-menu">Apps</h:span>
+				</a>
+		 </h:li>		
+          <forEach items="@load(vm.menus)" var="item">
+          
+			<h:li class="nav-small-cap"></h:li>
+			<h:li>
+				<h:a class="has-arrow waves-effect text-decoration-none fw-bolder"	href="javascript:void(0)" aria-expanded="false">
+					<h:i class="ti-layout-grid2"></h:i>
+					<h:span class="hide-menu">${item.name}</h:span>
+				</h:a>
+				           <h:ul aria-expanded="false" class="collapse" >
+				             <forEach items="${item.items}"	var="item1">
+				              <h:li><a sclass="text-decoration-none fw-bolder"  onClick="@command('onSelectItem',item=item1.page,page='apps.zhtml')">${item1.name}</a></h:li>
+				             </forEach>
+				           </h:ul>
+			</h:li>
+		</forEach> 
+      </h:ul>
+    </h:nav>   
+</nodom>
+</zk>

@@ -1,0 +1,608 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.3</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<packaging>war</packaging>
+	<groupId>suinsit-solutions</groupId>
+	<version>2.2.3</version>
+	<artifactId>discovery-pmo</artifactId>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<zkspringboot.version>2.5.12</zkspringboot.version>
+		<zats.version>2.1.1</zats.version>
+		<junit.version>4.13.1</junit.version>
+		<zk.version>9.5.0.2</zk.version>
+		<commons-io>2.4</commons-io>
+		<zkspring.version>4.0.1</zkspring.version>
+		<zats.version>2.0.0</zats.version>
+		<zkcalendar.version>3.0.1</zkcalendar.version>
+		<zk.chart>7.2.1.0</zk.chart>
+		<zk.editor>4.17.1.0</zk.editor>
+		<ckez.version>4.14.0.1</ckez.version>
+		<zkgmap.version>3.0.5</zkgmap.version>
+		<version.jackson>2.13.4</version.jackson>
+		<enart.version>3.7.3</enart.version>
+		<suinsit.version>3.2.4.2-RELEASE</suinsit.version>
+		<version.jdom>1.1.3</version.jdom>
+		<suinsit.nocode.applications>1.0.1</suinsit.nocode.applications>
+	</properties>
+	
+    <repositories>
+		
+        <repository>
+            <id>ZK CE</id>
+            <name>ZK CE Repository</name>
+            <url>https://mavensync.zkoss.org/maven2</url>
+        </repository>
+        
+    </repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mailjet</groupId>
+			<artifactId>mailjet-client</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- zkoss -->
+		<dependency>
+			<groupId>org.zkoss.zkspringboot</groupId>
+			<artifactId>zkspringboot-starter</artifactId>
+			<version>${zkspringboot.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkex</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss</groupId>
+			<artifactId>zsoup</artifactId>
+			<version>1.8.2.5</version>
+		</dependency>
+		<!-- zkoss -->
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>ckez</artifactId>
+			<version>${zk.editor}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkbind</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkex</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zul</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkplus</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zhtml</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.common</groupId>
+			<artifactId>zweb</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zk</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.common</groupId>
+			<artifactId>zcommon</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
+
+		<!-- Thanks for using https://jar-download.com -->
+
+		<!-- ZK PE / EE -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkex</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.common</groupId>
+			<artifactId>zel</artifactId>
+			<version>${zk.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.javassist</groupId>
+					<artifactId>javassist</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.29.1-GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId> <!-- since ZK 8 -->
+			<version>${zk.version}</version>
+
+		</dependency>
+		<!-- ZK Spring -->
+
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-core</artifactId>
+			<version>${zkspring.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-security</artifactId>
+			<version>${zkspring.version}</version>
+		</dependency>
+		<!-- ZK Editor -->
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>ckez</artifactId>
+			<version>${ckez.version}</version>
+		</dependency>
+		<!-- ZK Calendar -->
+		<dependency>
+			<groupId>org.zkoss.calendar</groupId>
+			<artifactId>calendar</artifactId>
+			<version>${zkcalendar.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- ZK Google Maps -->
+		<dependency>
+			<groupId>org.zkoss.zkforge</groupId>
+			<artifactId>gmapsz</artifactId>
+			<version>${zkgmap.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>theme-pack</artifactId>
+			<version>${zk.version}</version>
+
+		</dependency>
+		<!-- ZK Charts -->
+		<dependency>
+			<groupId>org.zkoss.chart</groupId>
+			<artifactId>zkcharts</artifactId>
+			<version>${zk.chart}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.zkoss.pivot</groupId>
+			<artifactId>pivottable</artifactId>
+			<version>2.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- suinsit 
+		<dependency>
+			<groupId>suinsit-platform</groupId>
+			<artifactId>suinsit.security</artifactId>
+			<version>3.2.0c</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.enartframework</groupId>
+					<artifactId>schema.pgsql</artifactId>
+				</exclusion>
+				
+			</exclusions>
+		</dependency> -->
+		<!--dependencias suinsit -->
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.framework.context</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.codegenerator.runtime</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.nocode.commons</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.framework.integration.mail</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.framework.webclient</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.studio.designer</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>suinsit.framework</groupId>
+			<artifactId>suinsit.nocode.web</artifactId>
+			<version>${suinsit.version}</version>
+		</dependency>
+
+
+		<!--enart -->
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-context</artifactId>
+			<version>${enart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-security</artifactId>
+			<version>${enart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-message</artifactId>
+			<version>${enart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-persistence</artifactId>
+			<version>${enart.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-mathematic</artifactId>
+			<version>${enart.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-integration-s3</artifactId>
+			<version>${enart.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>enart-ui-zkoss</artifactId>
+			<version>${enart.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>5.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.30</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>ST4</artifactId>
+			<version>4.0.8</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>stringtemplate</artifactId>
+			<version>3.2.1</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.0</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>schema.model</artifactId>
+			<version>3.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.enartframework</groupId>
+			<artifactId>schema.pgsql</artifactId>
+			<version>3.7.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.enartframework</groupId>
+					<artifactId>enart-persistence</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>${version.jdom}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.htmlparser.jericho</groupId>
+			<artifactId>jericho-html</artifactId>
+			<version>3.4</version>
+
+		</dependency>
+		<dependency>
+			<groupId>us.fatehi</groupId>
+			<artifactId>schemacrawler</artifactId>
+			<version>16.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>bsh</groupId>
+			<artifactId>bsh</artifactId>
+			<version>2.0b4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.12.267</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>1.70</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${version.jackson}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.2</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- Aplicaciones -->
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.crm</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.dms</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.erp.facturacion</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.erp.rrhh</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.contratos</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.fiscal</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.bpmn</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applications.marketing</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>suinsit.nocode.applications</groupId>
+			<artifactId>applicactions.commons</artifactId>
+			<version>${suinsit.nocode.applications}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<!--jasper -->
+		<!-- https://mvnrepository.com/artifact/ar.com.fdvs/DynamicJasper -->
+		<dependency>
+			<groupId>ar.com.fdvs</groupId>
+			<artifactId>DynamicJasper</artifactId>
+			<version>5.3.6</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

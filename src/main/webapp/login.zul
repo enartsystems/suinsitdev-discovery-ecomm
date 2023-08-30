@@ -1,0 +1,71 @@
+<?component name="includeHTML" extends="include" class="org.enartframework.zk.utils.IncludeHTML"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<zk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul/zul.xsd"
+	xmlns:h="xhtml"
+	xmlns:d="http://www.zkoss.org/2005/zk/client/attribute">
+
+	<div class="col-lg-6"
+		viewModel="@id('vm') @init('com.suinsit.webapp.login.LoginUI')"
+		validationMessages="@id('vmsgs')">
+		<div id="login" class="p-lg-5 p-4" visible="true">
+			<div>
+				<h:h5 class="text-primary">
+					<label value="@load(vm.ctxBean.customerLabel)">
+					</label>
+				</h:h5>
+				<h:p class="text-muted">
+					Autentificate para acceder a nuestra plataforma
+					online
+				</h:p>
+			</div>
+
+			<div class="mt-4">
+					<div
+						form="@id('fx')  @load(vm.loginTO) @save(vm.loginTO,before={'login'})">
+						<div class="mb-3">
+							<label  class="form-label">
+								Nombre de usuario / email
+							</label>
+							<textbox
+								placeholder="Nombre de usuario o email"
+								value="@bind(fx.ssousuario.txusername) @validator(vm.validator,required=true ,maxl='100' )"
+								class="form-control" />
+							<label sclass="text-danger"
+								value="@load(vmsgs['user'])" />
+						</div>
+
+						<div class="mb-3">
+							<div class="float-end">
+								<a onClick="@command('resetLogin')"
+									class="text-muted">
+									Olvido su contraseña?
+								</a>
+							</div>
+							<label class="form-label"
+								>
+								Contraseña
+							</label>
+							<div
+								class="position-relative auth-pass-inputgroup mb-3">
+								<textbox type="password"
+									value="@bind(fx.ssousuario.erpassword) @validator(vm.validator,required=true )"
+									class="form-control pe-5" />
+								<label sclass="text-danger"
+									value="@load(vmsgs['pass'])" />
+							</div>
+						</div>
+
+
+
+						<div class="mt-4">
+							<button class="btn btn-success w-100"
+								label="Autentificar" onClick="@command('login')">
+							</button>
+
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</zk>

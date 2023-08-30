@@ -1,0 +1,132 @@
+logging:
+  file:
+    path: ${SUINSIT_LOGS}
+    name: ${SUINSIT_CUSTOMER_NAME}_apps.log
+  level:
+    root: ${ROOT_LOG}
+    com.enartsystems: ${TECHNICAL_LOG}
+    com.suinsit: ${TECHNICAL_LOG}
+    com.suinsit.webapp.login: DEBUG
+
+zk:
+ springboot-packaging: war
+ homepage: index
+
+s3:
+ accessKey: 6d61f2bdf4ff42009d62accdefe2d87c 
+ secretkey: e4a44b5654da4bc5b350e4335c4d2c90
+ endpointurl: https://s3.gra.io.cloud.ovh.net/
+ region: gra
+ backet: ${SUINSIT_CUSTOMER_NAME}
+suinsit:
+  application:
+     server:
+       host: ${SUINSIT_SERVER_HOST}
+     product: ${SUINSIT_PRODUCT}
+     name: ${SUINSIT_APPLICATION}
+     version: 2.0.0
+     customer:
+        name: ${SUINSIT_CUSTOMER_NAME}
+        uid:  ${SUINSIT_CUSTOMER_UID}
+        label: ${SUINSIT_CUSTOMER_LABEL}
+     micros:
+       bpmn:
+         baseUrl: ${SUINSIT_BPMN_SERVER}
+         paths:
+          startAndGo: /process/startAndGo
+          completeAndGo: /tasks/completeTaskAndGo
+          tasks-assigned: /tasks/list
+          task: /tasks/task
+          tasks-unassigned: /tasks/unassigned
+          tasks-uclaim: /tasks/freeTask
+          tasks-assign: /tasks/assign
+          tasks-listByOtherUsers: /tasks/listByOtherUsers
+          
+       formanalizer:
+         baseUrl: ${DISCOVERY_FORMANALIZER_URL}
+         paths:
+          nominas: /formanalizers/nomina
+          invoices: /formanalizers/invoice
+       security:
+         baseUrl: http://localhost:9000/v1/
+         paths:
+           licence: /licence/{customerID}
+                  
+     pathHome : ${SUINSIT_HOME}
+     pathArchitecture: ${SUINSIT_SERVER_HOST}
+     pathStudio: ${SUINSIT_STUDIO}
+     pathRoot: ${SUINSIT_ROOT}
+     pathDeploy: ${SUNSIT_DEPLOY}
+     pathSource: ${SUINSIT_HOME}/data/sources
+     pathClasses: ${SUINSIT_HOME}/data/classes
+     enviroment: ${SUINSIT_ENVIROMENT}
+     mode: ${SUINSIT_MODE}            
+  security:
+    scope: aplicacion,sistema   
+  desktop:
+      ctx: /desktop
+      page: dashboard2.zhtml
+  #portal:
+  #    page: apps.zhtml
+  #    ctx: /portal    
+  mail:
+   proveedor: mailjet
+   clave:
+     api: 65efe0802e4428cc1a8f20a1b9010a31
+     #api : c74eefd7feb3fe78aab3b6150ee80ce1 
+     secret: 293e9c6fe6b556d38b0e8c09ac65f9e3
+     #secret: 163192987bbd1f16a410f5edeb6cab49
+   email:
+     support: soporte@suinsit.cloud
+     name: Soporte Suinsit    
+     #server.servlet.session.timeout=15m
+server:
+  servlet:
+    session:
+      timeout: 120m
+  port: 8082
+  #servlet:
+  #  context-path: /apps
+flowable:
+  
+  process-definition-location-prefix: file:${SUINSIT_HOME}/bpm/
+spring:
+  
+  datasource:
+    url: ${SUINSIT_BBDD_URL}
+    username: ${SUINSIT_BBDD_USERNAME}
+    password: ${SUINSIT_BBDD_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: true
+      connection-timeout: 100000
+      idle-timeout: 600000
+      max-lifetime: 90000
+      maximum-pool-size: 40
+      minimum-idle: 10
+      pool-name: SUINSIT_DS_0
+      
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: suinsit
+    password: 9xs8bpVtoC    
+           
+  mail:
+    host: in-v3.mailjet.com
+    port: 465
+    properties:
+      mail:
+       smtp:
+         auth: true
+         starttls:
+           enable: true
+    username: 65efe0802e4428cc1a8f20a1b9010a31
+    password: 293e9c6fe6b556d38b0e8c09ac65f9e3
+    
+    
+#    username=<login user to smtp server>
+#spring.mail.password=<login password to smtp server>
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.starttls.enable=true
+  
