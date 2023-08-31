@@ -44,12 +44,12 @@
                         <div class="card overflow-hidden">
                             <div class="row g-0">
                                 <div class="col-lg-6">
-                                    <div class="p-lg-5 p-4 auth-one-bg h-100">
+                                    <div class="p-lg-5 p-5 auth-one-bg h-100">
                                         <div class="bg-overlay" style="opacity: .5 !important;"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
-                                                <a href="index.zhtml" class="d-block">
-                                                    <img src="img/logo3.png" alt="" width="30%" height="30%"/>
+                                                <a href="https://suinsit.com/" class="d-block">
+                                                    <img src="img/logo-suinsit-dark.png" alt="" width="30%" height="30%"/>
                                                 </a>
                                             </div>
                                             <div class="mt-auto">
@@ -104,46 +104,35 @@
                                                 			class="carousel-item active">
                                                 			<p
                                                 				class="fs-24 ">
-                                                				Suinsit
-                                                				PMO
+                                                				Suinsit ECOMM
                                                 			</p>
                                                 		</div>
                                                 		<div
                                                 			class="carousel-item">
                                                 			<p
                                                 				class="fs-24 fst-italic">
-                                                				"Define
-                                                				tus
-                                                				estándares"
+                                                				"Organiza tus procesos administrativos"
                                                 			</p>
                                                 		</div>
                                                 		<div
                                                 			class="carousel-item">
                                                 			<p
                                                 				class="fs-24 fst-italic">
-                                                				"Establece
-                                                				tus
-                                                				métodos
-                                                				de
-                                                				gestión"
+                                                				"Colabora con tus clientes y empleados"
                                                 			</p>
                                                 		</div>
                                                 		<div
                                                 			class="carousel-item">
                                                 			<p
                                                 				class="fs-24 fst-italic">
-                                                				"Supervisa
-                                                				tus
-                                                				proyectos"
+                                                				"Incrementa tu productividad"
                                                 			</p>
                                                 		</div>
                                                 		<div
                                                 			class="carousel-item">
                                                 			<p
                                                 				class="fs-24 fst-italic">
-                                                				"Gestiona
-                                                				tus
-                                                				recursos"
+                                                				"Gestiona tus recursos"
                                                 			</p>
                                                 		</div>
                                                 	</div>
@@ -160,7 +149,7 @@
 											class="p-lg-5 p-4" visible="true">
                                         <div>
                                             <h5 class="text-primary">Bienvenido a   <z:label value="@load(vm.ctxBean.customerLabel)"></z:label></h5>
-                                            <p class="text-muted">Autentificate para acceder a Discovery </p>
+                                            <p class="text-muted">Autentificate para acceder a Suinsit office (Discovery) </p>
                                         </div>
 
                                         <div class="mt-4">
