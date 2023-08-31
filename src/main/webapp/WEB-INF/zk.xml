@@ -15,7 +15,7 @@
 	</preference>
 	<library-property>
 		<name>org.zkoss.theme.preferred</name>
-		<value>marigold</value> <!--blueberryandraspberry_c deepsea_c or silvertail, atlantic, deepsea, gardensalad 
+		<value>macaron</value> <!--blueberryandraspberry_c deepsea_c or silvertail, atlantic, deepsea, gardensalad 
 			etc. spaceblack gardensalad macaron-->
 	</library-property>
 	<library-property>

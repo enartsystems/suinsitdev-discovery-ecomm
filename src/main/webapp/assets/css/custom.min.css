@@ -2,7 +2,7 @@
 
 /*# sourceMappingURL=custom.min.css.map */
 /*
-Template Name: Suinsit Discovery PRM 
+Template Name: Suinsit Discovery ECOMM 
 Color Base: #FF9F0F
 Author: Ismael Gonzalez
 Version: 1.0
@@ -10,105 +10,225 @@ Website:
 Contact: ismael.dominguez@enartsystems.com
 */
 :root{
-	
+		
 	/* COLORES */
-	--color-app: #FF9F0F;
+	/* Regla Zkoss  Macaron */
+	--color-app: #F2B705;
+	--color-app-dark:#BF9004;	/* -20 en brillo en el color */
+	--color-app-rgba:242,283,5;
+
+	--color1: #92D9CF;
+	--color1-dark:#6FA69E;	/* -20 en brillo en el color */
+	--color1-rgba:146,217,207;
+	--color1-dark-rgba:111,166,158;
+			
+	--color2: #F25C05;
+	--color2-dark: #BF4904;	/* -20 en brillo en el color */
+	--color2-rgba: 242,92,5;
+	--color2-dark-rgba: 191,73,4;
 	
-	/* Regla Monocromatica */
-	--color-mono1: #805008;
-	--color-mono2: #FFBE5C;
-	--color-mono3: #805F2E;
-	--color-mono4: #CC7F0C;
-	--color-mono4-rgba: 204,127,12;
+	--color3: #F4F4F4;
 	
-	/* Regla Compuestos */
-	--color-comp1: #CCAA21;
-	--color-comp1-rgba: 204, 170, 33;
-	--color-comp2: #998946;
-	--color-comp3: #4FE2FF;
-	--color-comp4: #21CCBA;
+	--color4: #FFFFFF;
+	--color4-rgba: 255, 255, 255;
 	
+	/* Color de acento */
+	--color-a: #f17171;	/* Boton danger */
+	--color-a-dark:	#A64E4E;	/* -20 en brillo en el color */
+	--color-a-rgba: 241,113,113;
+	--color-a-dark-rgba: 166,78,78;
 	
-	/* 
+	 
+/* 
 	MENU LATERAL
 	Regla: Monocromatica + Blanco 
 	*/	
 	--vz-vertical-menu-bg-dark: var(--color-app);	/* Fondo del  menu */	
-	--vz-vertical-menu-title-color-dark: var(--color-mono2);
-	--vz-vertical-menu-item-color-dark: var(--color-mono1);	/* Color de la fuente del menu */
-	--vz-vertical-menu-item-hover-color-dark: white;	/* Color de la fuente hover item*/
-	--vz-vertical-menu-item-active-color-dark: var(--color-mono2);	/* Color de la fuente del item activo */
-	--vz-vertical-menu-sub-item-color-dark: var(--color-mono1);	/* Color de la fuente del sub-menu */
-	--vz-vertical-menu-sub-item-hover-color-dark: white;	/* Color de la fuente hover del sub-item */
-	--vz-vertical-menu-sub-item-active-color-dark: var(--color-mono2);	/* Color de la fuente del sub-item activo */
+	--vz-vertical-menu-title-color-dark: var(--color3);
+	--vz-vertical-menu-item-color-dark: var(--color3);	/* Color de la fuente del menu */
+	--vz-vertical-menu-item-hover-color-dark: var(--color4);	/* Color de la fuente hover item*/
+	--vz-vertical-menu-item-active-color-dark: var(--color4);	/* Color de la fuente del item activo */
+	--vz-vertical-menu-sub-item-color-dark: var(--color3);	/* Color de la fuente del sub-menu */
+	--vz-vertical-menu-sub-item-hover-color-dark: var(--color4);	/* Color de la fuente hover del sub-item */
+	--vz-vertical-menu-sub-item-active-color-dark: var(--color4);	/* Color de la fuente del sub-item activo */
 	
 	/*HEADER*/
-	--vz-header-bg-dark: var(--color-mono2);
-	--vz-header-item-color-dark: var(--color-mono4);
-	--vz-topbar-user-bg-dark: var(--color-mono2);
+	--vz-header-bg-dark: var(--color1);
+	--vz-header-item-color-dark: var(--color1);
+	--vz-topbar-user-bg-dark: var(--color1);
 	
 }
 
 .navbar-header .user-name-text{
-	color: var(--color-mono1);
+	color: var(--color3);
 	
 }
 .badge-soft-secondary {
-    color:  var(--color-mono4);
-    background-color: rgba(var(--color-mono4-rgba), 0.2);	/* Mismo color con transparencia */
+    color:  var(--color4);
+    background-color: rgba(var(--color4-rgba), 0.2);	/* Mismo color con transparencia */
 }
     .hamburger-icon span {
        
-           background-color: var(--color-mono4) !important;
+           background-color: var(--color4) !important;
     }
     
 .auth-bg-cover {
     background: linear-gradient(-45deg,var(--color-app) 20%,white);
 }
 .auth-one-bg .bg-overlay {
-    background: linear-gradient(to right,var(--color-mono2),var(--color-mono2));
+    background: linear-gradient(to right,var(--color1),var(--color1));
  }
- .btn-success {
-    color: white;
-    background-color: var(--color-comp1);
-    border-color: var(--color-comp1);
-}
- .btn-success:hover {
-    color: white;
-    background-color: rgba(var(--color-comp1-rgba), 0.8);
-    border-color: rgba(var(--color-comp1-rgba), 0.8);
-}
- .btn-success:active {
-    color: white;
-    background-color: var(--color-comp2);
-    border-color: var(--color-comp2);
-}
- .btn-success:focus {
-    color: white;
-    background-color:var(--color-comp2);
-    border-color: var(--color-comp2);
-}
+
+/*Texto de Bienvenida pagina login */
 .text-primary{
-		color: var(--color-mono1) !important;
+		color: var(--color-app-dark) !important;
 	
 }
+
+/* BOTONES */
+
+/* btn */
+ .btn:hover {
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+ .btn:active {
+    color: var(--color4);
+    background-color: var(--color1-dark);
+    border-color: var(--color1-dark);
+}
+ .btn:focus {    
+ 	color: var(--color4);
+    background-color: var(--color1-dark);
+    border-color: var(--color1-dark);
+}
+
+/* btn-success */
+.btn-success {
+    color: var(--color4);
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
+ .btn-success:hover {
+    color: var(--color4);
+    background-color: rgba(var(--color2-rgba), 0.8);
+    border-color: rgba(var(--color2-rgba), 0.8);
+}
+ .btn-success:active {
+    color: var(--color4);
+    background-color: var(--color2-dark);
+    border-color: var(--color2-dark);
+}
+ .btn-success:focus {
+    color: var(--color4);
+    background-color: var(--color2-dark);
+    border-color: var(--color2-dark);
+}
+
+/* btn-soft-success; Para testearlo en marketing mails.*/
+.btn-soft-success {
+    color: var(--color4);
+    background-color: rgba(var(--color2-rgba),0.5);
+    border-color: rgba(var(--color2-rgba),0.5);
+}
+ .btn-soft-success:hover {
+    color: var(--color4);
+    background-color: rgba(var(--color2-rgba), 0.3);
+    border-color: rgba(var(--color2-rgba), 0.3);
+}
+ .btn-soft-success:active {
+    color: var(--color4);
+    background-color: rgba(var(--color2-dark-rgba),0.5);
+    border-color: rgba(var(--color2-dark-rgba),0.5);
+}
+ .btn-soft-success:focus {
+    color: var(--color4);
+    background-color: rgba(var(--color2-dark-rgba),0.5);
+    border-color: rgba(var(--color2-dark-rgba),0.5);
+}
+
+/* btin-info */
 .btn-info {
-    color: #fff;
-    background-color: var(--color-comp1);
-    border-color: var(--color-comp1);
+    color: var(--color4);
+    background-color: var(--color1);
+    border-color: var(--color1);
 }
 .btn-info:hover {
-    color: white;
-    background-color: var(--color-comp2);
-    border-color: var(--color-comp2);
+    color: var(--color4);
+    background-color: rgba(var(--color1-rgba), 0.8);
+    border-color: rgba(var(--color1-rgba), 0.8);
 }
 .btn-info:focus {
-    color: white;
-    background-color: var(--color-comp2);
-    border-color: var(--color-comp2);
+    color: var(--color4);
+    background-color: var(--color1-dark);
+    border-color: var(--color1-dark);
 }
 .btn-info:active {
-    color: white;
-    background-color: var(--color-comp2);
-    border-color: var(--color-comp2);
+    color: var(--color4);
+    background-color: var(--color1-dark);
+    border-color: var(--color1-dark);
+}
+
+/* btn-soft-info */
+.btn-soft-info {
+    color: var(--color4);
+    background-color: rgba(var(--color1-rgba),0.5);
+    border-color: rgba(var(--color1-rgba),0.5);
+}
+.btn-soft-info:hover {
+    color: var(--color4);
+    background-color: rgba(var(--color1-rgba), 0.3);
+    border-color: rgba(var(--color1-rgba), 0.3);
+}
+.btn-soft-info:focus {
+    color: var(--color4);
+    background-color: rgba(var(--color1-dark-rgba),0.5);
+    border-color: rgba(var(--color1-dark-rgba),0.5);
+}
+.btn-soft-info:active {
+    color: var(--color4);
+    background-color: rgba(var(--color1-dark-rgba),0.5);
+    border-color: rgba(var(--color1-dark-rgba),0.5);
+}
+/* btn-secondary */
+.btn-secondary {
+    color: var(--color4);
+    background-color: var(--color-app);
+    border-color: var(--color-app);
+}
+.btn-secondary:hover {
+    color: var(--color4);
+    background-color: rgba(var(--color-app-rgba), 0.8);
+    border-color: rgba(var(--color-app-rgba), 0.8);
+}
+.btn-secondary:focus {
+    color: var(--color4);
+    background-color: var(--color-app-dark);
+    border-color: var(--color-app-dark);
+}
+.btn-secondary:active {
+    color: var(--color4);
+    background-color: var(--color-app-dark);
+    border-color: var(--color-app-dark);
+}
+/* btn-danger */
+.btn-danger {
+    color: var(--color-a-dark);
+    background-color: var(--color-a);
+    border-color: var(--color-a);
+}
+.btn-danger:hover {
+    color: var(--color4);
+    background-color: rgba(var(--color-a-rgba), 0.8);
+    border-color: rgba(var(--color-a-rgba), 0.8);
+}
+.btn-danger:focus {
+    color: var(--color4);
+    background-color: var(--color-a-dark);
+    border-color: var(--color-a-dark);
+}
+.btn-danger:active {
+    color: var(--color4);
+    background-color: var(--color-a-dark);
+    border-color: var(--color-a-dark);
 }
