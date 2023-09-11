@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.StringTokenizer;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import org.apache.commons.lang3.RandomUtils;
@@ -58,6 +60,7 @@ import org.zkoss.bind.annotation.ContextParam;
 import org.zkoss.bind.annotation.ContextType;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
+import org.zkoss.lang.Library;
 import org.zkoss.util.resource.Labels;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
@@ -72,6 +75,7 @@ import org.zkoss.zkplus.spring.SpringUtil;
 import org.zkoss.zul.Div;
 import org.zkoss.zul.Intbox;
 import org.zkoss.zul.Textbox;
+import org.zkoss.zul.theme.Themes;
 
 import com.enartsystems.mapping.BuilderDataBase;
 import com.enartsystems.mapping.BuilderModel;
@@ -228,7 +232,46 @@ public class LoginUI extends MasterPage {
 		Ssoruserol = BuildEntityFromClass.build(clsSsoruserol);
 		logacces = BuildEntityFromClass.build(clsLogAccess); 
   	    req = (HttpServletRequest) desktop.getExecution().getNativeRequest();
-		 viewRequest();
+		viewRequest();
+		setThemeZKCookie();
+
+		
+	}
+	
+	
+	//Establece el tema guardado en cookie de zkoss, si no existe una preferencia, crea una cookie y estable el tema predeterminado.
+	
+	private void setThemeZKCookie() {
+	    Cookie[] cookies = req.getCookies();
+	    boolean compactScreenCookieExists = false;
+	    String compactScreenCookieValue = ""; // Valor predeterminado si la cookie no existe
+	    String tema = Themes.getCurrentTheme();
+	    if (cookies != null) {
+	        for (Cookie cookie : cookies) {
+	            if (cookie.getName().equals("compactScreen")) {
+	                compactScreenCookieExists = true;
+	                compactScreenCookieValue = cookie.getValue();
+	                break; // Encontramos la cookie, no es necesario seguir buscando
+	            }
+	        }
+	    }
+	    //Si la cookie no existe la creo
+	    if (!compactScreenCookieExists) {
+	    	setCookie("compactScreen", compactScreenCookieValue);	//llamo al metodo para crear la cookie.
+	    }
+
+	    // Configura el tema de acuerdo al valor de la cookie (ya sea el existente o el predeterminado)
+	    Themes.setTheme(Executions.getCurrent(), tema);
+	    Library.setProperty("org.zkoss.theme.preferred", tema);
+	}
+	
+	//Crea una cookie con name y value
+	public void setCookie(String name, String value) {
+		HttpServletResponse resp = (HttpServletResponse)Executions.getCurrent().getNativeResponse();
+		Cookie cookie = new Cookie(name, value);
+		cookie.setMaxAge(10 * 365 * 24 * 60 * 60); // 10 años de expiracion
+		resp.addCookie(cookie);
+	}
 	}
 	private void autentificar() {
 		 

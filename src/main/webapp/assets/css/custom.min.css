@@ -54,7 +54,7 @@ Contact: ismael.dominguez@enartsystems.com
 	
 	/*HEADER*/
 	--vz-header-bg-dark: var(--color1);
-	--vz-header-item-color-dark: var(--color1);
+	--vz-header-item-color-dark: rgba(var(--color4-rgba), 0.5);
 	--vz-topbar-user-bg-dark: var(--color1);
 	
 }

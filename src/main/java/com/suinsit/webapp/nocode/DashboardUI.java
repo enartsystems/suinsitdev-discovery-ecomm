@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -49,6 +51,8 @@ import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.ContextParam;
 import org.zkoss.bind.annotation.ContextType;
+import org.zkoss.bind.annotation.NotifyChange;
+import org.zkoss.lang.Library;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.EventQueue;
@@ -60,6 +64,7 @@ import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zkmax.zul.Navbar;
 import org.zkoss.zul.Div;
 import org.zkoss.zul.Style;
+import org.zkoss.zul.theme.Themes;
 
 import com.enartsystems.discovery.domain.bpmn.ProcessRQ;
 import com.enartsystems.discovery.domain.bpmn.model.CustomerDto;
@@ -123,6 +128,8 @@ public class DashboardUI extends MasterHandler{
 	Class<?> clsBpmnvprocessemails;
 	Entity Ssomenuitem;
 	Class<?> clsSsomenuitem;
+	@Wire
+	Div compactScreenIcon;
 	public Context getCtxBean() {
 		return ctxBean;
 	}
@@ -522,5 +529,51 @@ public class DashboardUI extends MasterHandler{
 		
 	}
 
+//	NO SE USA.
+//	@NotifyChange("*")
+//	@Command("changeThemeZk")
+//	public void onChangeThemeZk(@BindingParam("theme")String tema) {
+//		//Themes.getCurrentTheme()+"_c";
+//		Themes.setTheme(Executions.getCurrent(), tema);
+//		Library.setProperty("org.zkoss.theme.preferred", tema);
+//		setCookie("compactScreen", Themes.getCurrentTheme());
+//		//view.invalidate();
+//		Executions.sendRedirect("");
+//		
+//	//	
+//	}
+	
+	//Crean una cookie con nombre y valor.
+	public void setCookie(String name, String value) {
+		HttpServletResponse resp = (HttpServletResponse)Executions.getCurrent().getNativeResponse();
+		resp.addCookie(new Cookie(name, value));
+	}
+	
+    /**
+     * Cambia el tema de Zkoss entre compact y no, dependiendo del valor de la cookie, y después cambia el valor de la cookie.
+     *
+     * @author Ismael
+     *
+     */
+	@NotifyChange("*")
+	@Command("changeCompactScreen")
+	public void compactScreenToggle() {
+		
+		String currentTheme = Themes.getCurrentTheme();
+		if (currentTheme.endsWith("_c")) {
+	        // Si termina con "_c", lo quito
+	        currentTheme =  currentTheme.substring(0, currentTheme.length() - 2);
+			setCookie("compactScreen", "");
 
+	    } else {
+	        // Si no termina con "_c", lo agrego
+	        currentTheme= currentTheme + "_c";
+	        setCookie("compactScreen", "_c");
+
+	    }
+		Themes.setTheme(Executions.getCurrent(), currentTheme);
+		Library.setProperty("org.zkoss.theme.preferred", currentTheme);
+		Executions.sendRedirect("");
+		
+	}
 }
