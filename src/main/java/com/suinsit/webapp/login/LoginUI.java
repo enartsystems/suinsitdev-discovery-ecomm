@@ -272,7 +272,7 @@ public class LoginUI extends MasterPage {
 		cookie.setMaxAge(10 * 365 * 24 * 60 * 60); // 10 años de expiracion
 		resp.addCookie(cookie);
 	}
-	}
+	
 	private void autentificar() {
 		 
 		
