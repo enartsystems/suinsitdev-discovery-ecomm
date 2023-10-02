@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Suinsit-ecom</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+  <!-- Inicio de pagina-->
+
+  <!--Main Navigation-->
+  <header>
+    <!-- Jumbotron -->
+    <div class="p-3 text-center bg-white border-bottom">
+      <div class="container">
+        <div class="row gy-3">
+          <!-- Left elements -->
+          <div class="col-lg-2 col-sm-4 col-4">
+            <a href="https://suinsit.com/" target="_blank" class="float-start">
+              <img src="img/logo-suinsit-dark.png" height="35" />
+            </a>
+          </div>
+          <!-- Left elements -->
+
+          <!-- Center elements -->
+          <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+            <div class="d-flex float-end">
+              <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-heart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Lista de Deseos</p>
+              </a>
+              <a href="cart.html" class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-shopping-cart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Mi carrito</p><span
+                  class="badge rounded-pill badge-notification bg-danger float-start">3</span>
+              </a>
+              <!-- Avatar -->
+              <div class="dropdown d-flex align-items-center ms-3">
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                    alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                  <li>
+                    <a class="dropdown-item" href="#">Mi perfil</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Mis pedidos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Salir</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Center elements -->
+
+          <!-- Right elements -->
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="input-group float-center">
+              <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Buscar</label>
+              </div>
+              <button type="button" class="btn btn-primary shadow-0">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Container wrapper -->
+      <div class="container ">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarLeftAlignExample" aria-controls="navbarLeftAlignExample" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ofertas</a>
+            </li>
+
+            </li>
+            <!-- Navbar dropdown con varias opciones-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                Catálogos
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2021-22</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2022-23</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Otras Temporadas</a>
+                </li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+
+
+          </ul>
+          <!-- Left links -->
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+
+  <!-- CATEGORIAS-->
+  <section class="mt-3">
+    <div class="container">
+      <main class="card p-3 shadow-2-strong">
+        <div class="row">
+
+          <div class="col-lg-3">
+            <nav class="nav flex-column nav-pills mb-md-2" id="pills-menu" role="tablist" aria-orientation="vertical">
+              <span class="py-2 ps-3 my-0">Categorías</span>
+              <hr class="dropdown-divider" />
+              <!-- TODOS LOS ARIA CONTROLS si manejas la visibilidad con zkoss y spring no seria necesario-->
+              <a class="nav-link active py-2 ps-3 my-0" id="novedades-tab" data-mdb-toggle="pill"
+                href="#pills-novedades" role="tab" aria-controls="pills-novedades" aria-selected="true">Novedades</a>
+              <a class="nav-link py-2 ps-3 my-0" id="pantalones-tab" data-mdb-toggle="pill" href="#pills-pantalones"
+                role="tab" aria-controls="pills-pantalones" aria-selected="false">Pantalones</a>
+              <a class="nav-link py-2 ps-3 my-0" id="camisetas-tab" data-mdb-toggle="pill" href="#pills-camisetas"
+                role="tab" aria-controls="pills-camisetas" aria-selected="false">Camisetas</a>
+              <a class="nav-link py-2 ps-3 my-0" id="sudaderas-tab" data-mdb-toggle="pill" href="#pills-sudaderas"
+                role="tab" aria-controls="pills-sudaderas" aria-selected="false">Sudaderas</a>
+              <a class="nav-link py-2 ps-3 my-0" id="abrigos-tab" data-mdb-toggle="pill" href="#pills-abrigos"
+                role="tab" aria-controls="pills-abrigos" aria-selected="false">Abrigos</a>
+              <a class="nav-link py-2 ps-3 my-0" id="complementos-tab" data-mdb-toggle="pill" href="#pills-complementos"
+                role="tab" aria-controls="pills-complementos" aria-selected="false">Complementos</a>
+              <a class="nav-link py-2 ps-3 my-0" id="zapatos-tab" data-mdb-toggle="pill" href="#pills-zapatos"
+                role="tab" aria-controls="pills-zapatos" aria-selected="false">Zapatos</a>
+            </nav>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="card  p-0 bg-primary rounded-5 justify-content-center" style="height: 350px;">
+
+              <img src="img/Ropa/fondo.jpg" class="card-img d-flex" style="height: 350px;"
+                alt="Stony Beach" />
+              <div class="mask rounded" style="background-color: rgba(0, 0, 0, 0.6);">
+
+                <div class="card-img-overlay p-5">
+                  <h2 class="text-light">
+                    Temporada 2024<br />
+                    Ya disponible
+                  </h2>
+                  <p class="text-light">No te pierdas nuestra nueva temporada, con un look más actual con las últimas
+                    tendencias, y los clásicos de siempre.</p>
+                  <a href="list.html" class="btn btn-secondary shadow-0 text-primary"> Ver más </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+    </div>
+    <!-- container end.// -->
+  </section>
+  <!-- FIN CATEGORIAS -->
+
+  <!-- PRODUCTOS -->
+  <section>
+    <div class="container">
+
+      <!--CONTENIDO DEL PILL, efecto creado para dar dinamismo a la página, se deben cargar los productos desde el backend realmente.-->
+      <div class="tab-content" id="pills-conten">
+
+        <!--Pill de Novedades-->
+        <div class="tab-pane fade show active" id="pills-novedades" role="tabpanel" aria-labelledby="novedades-tab">
+          <!--Titulo de la sección-->
+          <header class="mb-4">
+            <h3>Nuevos productos</h3>
+          </header>
+          <!--Fila de todos los productos-->
+          <div class="row">
+
+            <!--  
+              ///PRODUCTO ITEM MODELO 1 ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/camisa2.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">29.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Camisa manga larga</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Sizes: S,M,L,XL
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO 2///
+            -->
+
+
+            <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon4.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">25.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Corto</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+                        <!--  
+              ///PRODUCTO ITEM MODELO 1 ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/camisa3.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">29.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Camisa manga larga</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Sizes: S,M,L,XL
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///PRODUCTO ITEM MODELO 1 ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/falda1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">22.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Falda vaquera</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Sizes: S,M,L,XL
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO 2///
+            -->
+
+
+            <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/camisa1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">35.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Camisa de Manga larga</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+            <!--  
+              ///PRODUCTO ITEM MODELO 1 ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/camiseta1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">19.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Camiseta manga corta</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Sizes: S,M,L,XL
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO 2///
+            -->
+
+
+            <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/abrigo1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">120.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Abrigo</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+
+              <!--  
+              ///PRODUCTO ITEM MODELO 1 ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/12.webp" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">29.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Camiseta manga corta</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Sizes: S,M,L,XL
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO 2///
+            -->
+          </div>
+          <!--Fin Fila de productos-->
+
+
+        </div>
+        <!--Fin pill Novedades-->
+
+        <!-- Pill Pantalones-->
+        <div class="tab-pane fade show" id="pills-pantalones" role="tabpanel" aria-labelledby="pantalones-tab">
+
+          <!--Titulo de la sección-->
+          <header class="mb-4">
+            <h3>Pantalones</h3>
+          </header>
+          <!--Productos de Pantalones-->
+          <div class="row">
+
+            <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon2.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">25.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Corto</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon3.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <!-- <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h6><span class="badge bg-success pt-2">Ofertas</span></h6>
+                      </div>
+                    </div> -->
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">19.90€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Chándal</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-success pt-2">Oferta 50%</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">40,50€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Vaquero largo</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+             <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon2.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">25.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Corto</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon3.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <!-- <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h6><span class="badge bg-success pt-2">Ofertas</span></h6>
+                      </div>
+                    </div> -->
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">19.90€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Chándal</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-success pt-2">Oferta 50%</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">40,50€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Vaquero largo</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+             <!--  
+              ///PRODUCTO ITEM MODELO ///
+             -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon2.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-danger ms-2">Nuevo</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">25.95€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Corto</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon3.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <!-- <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h6><span class="badge bg-success pt-2">Ofertas</span></h6>
+                      </div>
+                    </div> -->
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">19.90€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Chándal</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Blanco,Verde,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card ">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="img/Ropa/pantalon1.jpg" class="w-100" />
+                  <a href="productDetail.html">
+
+                    <!-- Etiquetas badget, de oferta, nuevo,... -->
+                    <div class="mask">
+                      <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-success pt-2">Oferta 50%</span></h5>
+                        <!-- <h6><span class="badge bg-success pt-2">Ofertas</span></h6> -->
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body p-0 pt-3">
+                  <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i
+                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <!--Precio-->
+                  <h5 class="card-title">40,50€</h5>
+                  <!--Titulo-->
+                  <p class="card-text mb-0">Pantalón Vaquero largo</p>
+                  <!--Propiedades-->
+                  <p class="text-muted">
+                    Tallas: S,M,L,XL
+                  </p>
+                  <p class="text-muted">
+                    Colores: Azul,Negro
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  
+              ///FIN PRODUCTO ITEM MODELO ///
+            -->
+
+
+
+          </div>
+          <!--Producto de Pantalones-->
+
+
+        </div>
+        <!--Fin pill Pantalones-->
+      
+      </div>
+      <!--Fin Contenido del Pill-->
+
+    </div>
+  </section>
+  <!--Fin de Productos-->
+
+
+  <!-- Feature -->
+  <section class="">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6">
+
+          <div class="card bg-gray h-100 text-white ">
+            <img src="img/Ropa/ropa.jpg" class="card-img" style="object-fit: cover; width: 100%; height: 100%;" alt="...">
+            <div class="mask " style="background-color: rgba(247, 219, 187, 0.6);"></div>
+            <div class="card-img-overlay p-3 p-lg-5 d-flex flex-column justify-content-end">
+              <h5 class="card-title text-dark">Ofertas en temporada 2022</h5>
+              <p class="card-text text-dark">Ofertas en nuestra temporada de invierno 2022</p>
+              <a class="btn btn-warning" href="#">VER Ofertas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row mb-3 mb-sm-4 g-3 g-sm-4">
+            <div class="col-6 d-flex">
+              <div class="card w-100 bg-primary" style="min-height: 200px;">
+                <div class="card-body">
+                  <h5 class="text-white">Eres distribuidor?</h5>
+                  <p class="text-white-50">Descubre nuestras ofertas para distribuidores</p>
+                  <a class="btn btn-outline-light btn-sm" href="#">Ver Ofertas</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex">
+              <div class="card w-100 bg-primary" style="min-height: 200px;">
+                <div class="card-body">
+                  <h5 class="text-white">Franquicia</h5>
+                  <p class="text-white-50">Si estás interesado en abrir una nueva franquicia</p>
+                  <a class="btn btn-outline-light btn-sm" href="#">Saber más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row.// -->
+
+          <div class="card bg-success" style="min-height: 200px;">
+            <div class="card-body">
+              <h5 class="text-white">Ofertas por grandes compras</h5>
+              <p class="text-white-50" style="max-width: 400px;">En pedidos mayores a 2000€ podrás tener increíbles descuentos</p>
+              <a class="btn btn-outline-light btn-sm" href="#">Saber más</a>
+            </div>
+          </div>
+        </div>
+        <!-- col.// -->
+      </div>
+      <!-- row.// -->
+    </div>
+    <!-- container end.// -->
+  </section>
+  <!-- Feature -->
+
+  <!-- Recently viewed -->
+  <section class="mt-5 mb-4">
+    <div class="container text-dark">
+      <header class="">
+        <h3 class="section-title">Vistos recientemente</h3>
+      </header>
+
+      <div class="row gy-3">
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp" />
+          </a>
+        </div>
+        <!-- col.// -->
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/2.webp" />
+          </a>
+        </div>
+        <!-- col.// -->
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/3.webp" />
+          </a>
+        </div>
+        <!-- col.// -->
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/4.webp" />
+          </a>
+        </div>
+        <!-- col.// -->
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/5.webp" />
+          </a>
+        </div>
+        <!-- col.// -->
+        <div class="col-lg-2 col-md-4 col-4">
+          <a href="#" class="img-wrap">
+            <img height="200" width="200" class="img-thumbnail"
+              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/6.webp" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Recently viewed -->
+
+  <section>
+    <div class="container">
+      <div class="px-4 pt-3 border">
+        <div class="row pt-1">
+          <div class="col-lg-3 col-md-6 mb-3 d-flex">
+            <div class="d-flex align-items-center">
+              <div class="badge badge-warning p-2 rounded-4 me-3">
+                <i class="fas fa-thumbs-up fa-2x fa-fw"></i>
+              </div>
+              <span class="info">
+                <h6 class="title">Precios competitivos</h6>
+                <p class="mb-0">Los mejores precios del sector</p>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3 d-flex">
+            <div class="d-flex align-items-center">
+              <div class="badge badge-warning p-2 rounded-4 me-3">
+                <i class="fas fa-plane fa-2x fa-fw"></i>
+              </div>
+              <span class="info">
+                <h6 class="title">Entregas Internacionales</h6>
+                <p class="mb-0">Entregas a cualquier parte del mundo</p>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3 d-flex">
+            <div class="d-flex align-items-center">
+              <div class="badge badge-warning p-2 rounded-4 me-3">
+                <i class="fas fa-star fa-2x fa-fw"></i>
+              </div>
+              <span class="info">
+                <h6 class="title">Calidad</h6>
+                <p class="mb-0">Productos de inmejorable calidad</p>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3 d-flex">
+            <div class="d-flex align-items-center">
+              <div class="badge badge-warning p-2 rounded-4 me-3">
+                <i class="fas fa-phone-alt fa-2x fa-fw"></i>
+              </div>
+              <span class="info">
+                <h6 class="title">Llámanos</h6>
+                <p class="mb-0">Si necesitas ayudar o asesoramiento, no dudes en llamarnos</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted bg-primary mt-3">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start pt-4 pb-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-12 col-lg-3 col-sm-12 mb-2">
+            <!-- Content -->
+            <a href="https://suinsit.com/" target="_blank" class="text-white h2">
+              Suinsit
+            </a>
+            <p class="mt-1 text-white">
+              © 2023 Copyright: suinsit.com
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Tienda
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Sobre nosotros</a></li>
+              <li><a class="text-white-50" href="#">Encuentra tu tienda</a></li>
+              <li><a class="text-white-50" href="#">Categorías</a></li>
+              <li><a class="text-white-50" href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Información
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">Devoluciones</a></li>
+              <li><a class="text-white-50" href="#">Información de pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Soporte
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">AReestablecer cuenta</a></li>
+              <li><a class="text-white-50" href="#">Pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-12 col-sm-12 col-lg-3">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">Newsletter</h6>
+            <p class="text-white">Mantente informado de todas nuestras ofertas y novedades con nuestra newsletter</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control border" placeholder="Email" aria-label="Email"
+                aria-describedby="button-addon2" />
+              <button class="btn btn-light border shadow-0" type="button" id="button-addon2"
+                data-mdb-ripple-color="dark">
+                Entrar
+              </button>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <div class="">
+      <div class="container">
+        <div class="d-flex justify-content-between py-4 border-top">
+          <!--- payment --->
+          <div>
+            <i class="fab fa-lg fa-cc-visa text-white"></i>
+            <i class="fab fa-lg fa-cc-amex text-white"></i>
+            <i class="fab fa-lg fa-cc-mastercard text-white"></i>
+            <i class="fab fa-lg fa-cc-paypal text-white"></i>
+          </div>
+          <!--- payment --->
+
+          <!--- language selector --->
+          <div class="dropdown dropup">
+            <a class="dropdown-toggle text-white" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false"> <i class="flag-united-kingdom flag m-0 me-1"></i>English </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="Dropdown">
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English <i
+                    class="fa fa-check text-success ms-2"></i></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+              </li>
+            </ul>
+          </div>
+          <!--- language selector --->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+  <!-- Fin de pagina-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

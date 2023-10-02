@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Suinsit-ecom</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+  <!-- Inicio de pagina-->
+
+  <!--Main Navigation-->
+  <header>
+    <!-- Jumbotron -->
+    <div class="p-3 text-center bg-white border-bottom">
+      <div class="container">
+        <div class="row gy-3">
+          <!-- Left elements -->
+          <div class="col-lg-2 col-sm-4 col-4">
+            <a href="https://suinsit.com/" target="_blank" class="float-start">
+              <img src="img/logo-suinsit-dark.png" height="35" />
+            </a>
+          </div>
+          <!-- Left elements -->
+
+          <!-- Center elements -->
+          <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+            <div class="d-flex float-end">
+              <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-heart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Lista de Deseos</p>
+              </a>
+              <a href="cart.html" class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-shopping-cart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Mi carrito</p><span
+                  class="badge rounded-pill badge-notification bg-danger float-start">3</span>
+              </a>
+              <!-- Avatar -->
+              <div class="dropdown d-flex align-items-center ms-3">
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                    alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                  <li>
+                    <a class="dropdown-item" href="#">Mi perfil</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Mis pedidos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Salir</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Center elements -->
+
+          <!-- Right elements -->
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="input-group float-center">
+              <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Buscar</label>
+              </div>
+              <button type="button" class="btn btn-primary shadow-0">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Container wrapper -->
+      <div class="container ">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarLeftAlignExample" aria-controls="navbarLeftAlignExample" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ofertas</a>
+            </li>
+
+            </li>
+            <!-- Navbar dropdown con varias opciones-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                Catálogos
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2021-22</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2022-23</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Otras Temporadas</a>
+                </li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+
+
+          </ul>
+          <!-- Left links -->
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+
+<!--Main layout-->
+<main class="mt-5 pt-4">
+  <div class="container mt-5">
+      <!--Grid row-->
+      <div class="row">
+          <!--Grid column-->
+          <div id="carouselProducto" class="carousel slide col-md-6 mb-4" data-mdb-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/Ropa/camisa3.jpg" class="w-100 img-fluid" alt="Wild Landscape"/>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Ropa/modelo1.jpg" class="w-100 img-fluid" alt="Camera"/>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Ropa/modelo2.jpg" class="w-100 img-fluid" alt="Exotic Fruits"/>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Ropa/modelo3.jpg" class="w-100 img-fluid" alt="Exotic Fruits"/>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselProducto" data-mdb-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselProducto" data-mdb-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+              <!--Content-->
+              <div class="p-4">
+                  <div class="mb-3">
+                      <a href="">
+                          <span class="badge bg-dark me-1">Vestidos</span>
+                      </a>
+                      <a href="">
+                          <span class="badge bg-danger me-1">Nuevo</span>
+                      </a>
+                      <a href="">
+                          <span class="badge bg-info me-1">Bestseller</span>
+                      </a>
+                  </div>
+
+                  <p class="lead">
+                      <!-- <span class="me-1">
+                          <del>$200</del>
+                      </span> -->
+                      <span>32,50€</span>
+                  </p>
+
+                  <strong><p style="font-size: 20px;">Vestido Largo</p></strong>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa sint voluptatibus! Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+
+                  <form class="d-flex justify-content-left">
+                      <!-- Default input -->
+                      <div class="form-outline me-1" style="width: 100px;">
+                          <input type="number" value="1" class="form-control" />
+                      </div>
+                      <button class="btn btn-primary ms-1" type="submit">
+                          Añadir
+                          <i class="fas fa-shopping-cart ms-1"></i>
+                      </button>
+                  </form>
+              </div>
+              <!--Content-->
+          </div>
+          <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+      <hr />
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-md-6 text-center">
+              <h4 class="my-4 h4">Productos similares</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit voluptates, quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+          </div>
+          <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4">
+              <img src="img/Ropa/camisa1.jpg" class="img-fluid rounded" alt="" />
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+              <img src="img/Ropa/camisa2.jpg" class="img-fluid rounded" alt="" />
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+              <img src="img/Ropa/camisa4.jpg" class="img-fluid" alt="" />
+          </div>
+          <!--Grid column-->
+      </div>
+      <!--Grid row-->
+  </div>
+</main>
+<!--Main layout-->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted bg-primary mt-3">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start pt-4 pb-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-12 col-lg-3 col-sm-12 mb-2">
+            <!-- Content -->
+            <a href="https://suinsit.com/" target="_blank" class="text-white h2">
+              Suinsit
+            </a>
+            <p class="mt-1 text-white">
+              © 2023 Copyright: suinsit.com
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Tienda
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Sobre nosotros</a></li>
+              <li><a class="text-white-50" href="#">Encuentra tu tienda</a></li>
+              <li><a class="text-white-50" href="#">Categorías</a></li>
+              <li><a class="text-white-50" href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Información
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">Devoluciones</a></li>
+              <li><a class="text-white-50" href="#">Información de pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Soporte
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">AReestablecer cuenta</a></li>
+              <li><a class="text-white-50" href="#">Pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-12 col-sm-12 col-lg-3">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">Newsletter</h6>
+            <p class="text-white">Mantente informado de todas nuestras ofertas y novedades con nuestra newsletter</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control border" placeholder="Email" aria-label="Email"
+                aria-describedby="button-addon2" />
+              <button class="btn btn-light border shadow-0" type="button" id="button-addon2"
+                data-mdb-ripple-color="dark">
+                Entrar
+              </button>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <div class="">
+      <div class="container">
+        <div class="d-flex justify-content-between py-4 border-top">
+          <!--- payment --->
+          <div>
+            <i class="fab fa-lg fa-cc-visa text-white"></i>
+            <i class="fab fa-lg fa-cc-amex text-white"></i>
+            <i class="fab fa-lg fa-cc-mastercard text-white"></i>
+            <i class="fab fa-lg fa-cc-paypal text-white"></i>
+          </div>
+          <!--- payment --->
+
+          <!--- language selector --->
+          <div class="dropdown dropup">
+            <a class="dropdown-toggle text-white" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false"> <i class="flag-united-kingdom flag m-0 me-1"></i>English </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="Dropdown">
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English <i
+                    class="fa fa-check text-success ms-2"></i></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+              </li>
+            </ul>
+          </div>
+          <!--- language selector --->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Suinsit-ecom</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+  <!-- Inicio de pagina-->
+
+  <!--Main Navigation-->
+  <header>
+    <!-- Jumbotron -->
+    <div class="p-3 text-center bg-white border-bottom">
+      <div class="container">
+        <div class="row gy-3">
+          <!-- Left elements -->
+          <div class="col-lg-2 col-sm-4 col-4">
+            <a href="https://suinsit.com/" target="_blank" class="float-start">
+              <img src="img/logo-suinsit-dark.png" height="35" />
+            </a>
+          </div>
+          <!-- Left elements -->
+
+          <!-- Center elements -->
+          <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+            <div class="d-flex float-end">
+              <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-heart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Lista de Deseos</p>
+              </a>
+              <a href="cart.html" class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                  class="fas fa-shopping-cart m-1 me-md-2"></i>
+                <p class="d-none d-md-block mb-0">Mi carrito</p><span
+                  class="badge rounded-pill badge-notification bg-danger float-start">3</span>
+              </a>
+              <!-- Avatar -->
+              <div class="dropdown d-flex align-items-center ms-3">
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                    alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                  <li>
+                    <a class="dropdown-item" href="#">Mi perfil</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Mis pedidos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Salir</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Center elements -->
+
+          <!-- Right elements -->
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="input-group float-center">
+              <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Buscar</label>
+              </div>
+              <button type="button" class="btn btn-primary shadow-0">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Container wrapper -->
+      <div class="container ">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarLeftAlignExample" aria-controls="navbarLeftAlignExample" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ofertas</a>
+            </li>
+
+            </li>
+            <!-- Navbar dropdown con varias opciones-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                Catálogos
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2021-22</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Temporada 2022-23</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Otras Temporadas</a>
+                </li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+
+
+          </ul>
+          <!-- Left links -->
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+    <!-- cart + summary -->
+    <section class="bg-light my-5">
+      <div class="container">
+        <div class="row">
+          <!-- cart -->
+          <div class="col-lg-9">
+            <div class="card border shadow-0">
+              <div class="m-4">
+                <h4 class="card-title mb-4">Tu Carrito de la compra</h4>
+                <div class="row gy-3 mb-4">
+                  <div class="col-lg-5">
+                    <div class="me-lg-5">
+                      <div class="d-flex">
+                        <img src="img/Ropa/abrigo1.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                        <div class="">
+                          <a href="#" class="nav-link">Abrigo de borrego</a>
+                          <p class="text-muted">Color kaki, Talla M</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                    <div class="">
+                      <select style="width: 100px;" class="form-select me-4">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div class="">
+                      <text class="h6">151€</text> <br />
+                      <small class="text-muted text-nowrap"> 75.50€ / por item </small>
+                    </div>
+                  </div>
+                  <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                    <div class="float-md-end">
+                      <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                      <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Eliminar</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="row gy-3 mb-4">
+                  <div class="col-lg-5">
+                    <div class="me-lg-5">
+                      <div class="d-flex">
+                        <img src="img/Ropa/camisa2.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                        <div class="">
+                          <a href="#" class="nav-link">Camisa larga mujer</a>
+                          <p class="text-muted">Beige, M</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                    <div class="">
+                      <select style="width: 100px;" class="form-select me-4">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div class="">
+                      <text class="h6">32.50€</text> <br />
+                      <small class="text-muted text-nowrap"> 32.50€ / por item </small>
+                    </div>
+                  </div>
+                  <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                    <div class="float-md-end">
+                      <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                      <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Eliminar</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="row gy-3">
+                  <div class="col-lg-5">
+                    <div class="me-lg-5">
+                      <div class="d-flex">
+                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/13.webp" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                        <div class="">
+                          <a href="#" class="nav-link">Blazer Suit Dress Jacket Hombre</a>
+                          <p class="text-muted">Blue Jean, Talla L</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                    <div class="">
+                      <select style="width: 100px;" class="form-select me-4">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div class="">
+                      <text class="h6">50.95€</text> <br />
+                      <small class="text-muted text-nowrap"> 50.95€ / por item </small>
+                    </div>
+                  </div>
+                  <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                    <div class="float-md-end">
+                      <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                      <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Eliminar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="border-top pt-4 mx-4 mb-4">
+                <p><i class="fas fa-truck text-muted fa-lg"></i> Envío gratuito en 1-2 semanas.</p>
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- cart -->
+          <!-- summary -->
+          <div class="col-lg-3">
+            <div class="card mb-3 border shadow-0">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">Tienes cupón?</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control border" name="" placeholder="Coupon code" />
+                      <button class="btn btn-light border">Aplicar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card shadow-0 border">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Total price:</p>
+                  <p class="mb-2">$329.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Discount:</p>
+                  <p class="mb-2 text-success">-$60.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">TAX:</p>
+                  <p class="mb-2">$14.00</p>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <p class="mb-2">Total:</p>
+                  <p class="mb-2 fw-bold">233.45€</p>
+                </div>
+    
+                <div class="mt-3">
+                  <a href="checkout.html" class="btn btn-success w-100 shadow-0 mb-2">COMPRAR </a>
+                  <a href="home.html" class="btn btn-light w-100 border mt-2"> Seguir comprando </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- summary -->
+        </div>
+      </div>
+    </section>
+    <!-- cart + summary -->
+    <section>
+      <div class="container my-5">
+        <header class="mb-4">
+          <h3>Recomendados</h3>
+        </header>
+    
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card px-4 border shadow-0 mb-4 mb-lg-0 position-relative">
+                <a href="#" class="">
+                    <img src="img/Ropa/pantalon1.jpg" class="card-img-top rounded-2 align-self-center" style="height: 200px; object-fit: cover;">
+                </a>
+                <div class="mask px-2" style="height: 50px;">
+                    <div class="d-flex justify-content-between">
+                        <h6><span class="badge bg-danger pt-1 mt-3 ms-2">Oferta</span></h6>
+                        <a href="#"><i class="fas fa-heart text-primary fa-lg pt-3 m-2"></i></a>
+                    </div>
+                </div>
+                <div class="card-body d-flex flex-column pt-3 border-top">
+                    <a href="#" class="nav-link mt-auto">Pantalón corto estampado</a>
+                    <div class="price-wrap mb-2">
+                        <strong class="d-block">18.95€</strong>
+                        <del class="">24.99€</del>
+                    </div>
+                    <div class="card-footer pt-3 px-0 pb-0">
+                        <a href="#" class="btn btn-outline-primary w-100">Añadir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+          <div class="card px-4 border shadow-0 mb-4 mb-lg-0 position-relative">
+              <a href="#" class="">
+                  <img src="img/Ropa/falda1.jpg" class="card-img-top rounded-2 align-self-center" style="height: 200px; object-fit: cover;">
+              </a>
+              <div class="mask px-2" style="height: 50px;">
+                  <div class="d-flex justify-content-between">
+                      <h6><span class="badge bg-info pt-1 mt-3 ms-2">Nuevo</span></h6>
+                      <a href="#"><i class="fas fa-heart text-primary fa-lg pt-3 m-2"></i></a>
+                  </div>
+              </div>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                  <a href="#" class="nav-link mt-auto">Falda vaquera</a>
+                  <div class="price-wrap mb-2">
+                    <strong class="d-block">23.50€</strong>
+                    <del class="">24.99€</del>
+                  </div>
+                  <div class="card-footer pt-3 px-0 pb-0">
+                      <a href="#" class="btn btn-outline-primary w-100">Añadir</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card px-4 border shadow-0 mb-4 mb-lg-0 position-relative">
+              <div class="mask px-2" style="height: 50px;">
+                <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+              </div>
+              <a href="#" class="">
+                <img src="img/Ropa/camisa4.jpg" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Camisa de hilo</a>
+                <div class="price-wrap mb-2">
+                  <strong class="d-block">43.95€</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Añadir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card px-4 border shadow-0">
+              <div class="mask px-2" style="height: 50px;">
+                <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+              </div>
+              <a href="#" class="">
+                <img src="img/Ropa/camiseta1.jpg" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Camiseta de algodón </a>
+                <div class="price-wrap mb-2">
+                  <strong class="">13.90€</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Añadir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recommended -->
+    
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted bg-primary mt-3">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start pt-4 pb-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-12 col-lg-3 col-sm-12 mb-2">
+            <!-- Content -->
+            <a href="https://suinsit.com/" target="_blank" class="text-white h2">
+              Suinsit
+            </a>
+            <p class="mt-1 text-white">
+              © 2023 Copyright: suinsit.com
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Tienda
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Sobre nosotros</a></li>
+              <li><a class="text-white-50" href="#">Encuentra tu tienda</a></li>
+              <li><a class="text-white-50" href="#">Categorías</a></li>
+              <li><a class="text-white-50" href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Información
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">Devoluciones</a></li>
+              <li><a class="text-white-50" href="#">Información de pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Soporte
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Teléfono</a></li>
+              <li><a class="text-white-50" href="#">AReestablecer cuenta</a></li>
+              <li><a class="text-white-50" href="#">Pedidos</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-12 col-sm-12 col-lg-3">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">Newsletter</h6>
+            <p class="text-white">Mantente informado de todas nuestras ofertas y novedades con nuestra newsletter</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control border" placeholder="Email" aria-label="Email"
+                aria-describedby="button-addon2" />
+              <button class="btn btn-light border shadow-0" type="button" id="button-addon2"
+                data-mdb-ripple-color="dark">
+                Entrar
+              </button>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <div class="">
+      <div class="container">
+        <div class="d-flex justify-content-between py-4 border-top">
+          <!--- payment --->
+          <div>
+            <i class="fab fa-lg fa-cc-visa text-white"></i>
+            <i class="fab fa-lg fa-cc-amex text-white"></i>
+            <i class="fab fa-lg fa-cc-mastercard text-white"></i>
+            <i class="fab fa-lg fa-cc-paypal text-white"></i>
+          </div>
+          <!--- payment --->
+
+          <!--- language selector --->
+          <div class="dropdown dropup">
+            <a class="dropdown-toggle text-white" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false"> <i class="flag-united-kingdom flag m-0 me-1"></i>English </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="Dropdown">
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English <i
+                    class="fa fa-check text-success ms-2"></i></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+              </li>
+            </ul>
+          </div>
+          <!--- language selector --->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+  <!-- Fin de pagina-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
